@@ -1,0 +1,175 @@
+[project]
+site_url = "https://mitosisx.github.io/crescent-docs/"
+site_name = "Crescent"
+site_description = "Write Android apps in Lua, on your phone."
+site_author = "Naveto Tech"
+
+copyright = "Copyright &copy; 2026 Naveto Tech"
+
+repo_url = "https://github.com/mitosisX/crescent-android-lua"
+repo_name = "mitosisX/crescent-android-lua"
+
+nav = [
+  { "Home" = "index.md" },
+  { "Get started" = [
+    "get-started/index.md",
+    { "Your first app" = "get-started/first-app.md" },
+  ] },
+  { "Guide" = [
+    { "Layouts" = "guide/layouts.md" },
+    { "Screens and navigation" = "guide/screens.md" },
+    { "Events" = "guide/events.md" },
+    { "Colours and text" = "guide/styling.md" },
+    { "Icons" = "guide/icons.md" },
+    { "Waiting" = "guide/waiting.md" },
+    { "Files" = "guide/files.md" },
+    { "Using Android directly" = "guide/java.md" },
+  ] },
+  # reference-nav:start (written by scripts/gen_reference.py)
+  { "Reference" = [
+    { "crescent.ui" = [
+      "reference/ui/index.md",
+      { "Button" = "reference/ui/Button.md" },
+      { "Card" = "reference/ui/Card.md" },
+      { "CheckBox" = "reference/ui/CheckBox.md" },
+      { "Column" = "reference/ui/Column.md" },
+      { "Dialogs" = "reference/ui/Dialogs.md" },
+      { "Dropdown" = "reference/ui/Dropdown.md" },
+      { "Fab" = "reference/ui/Fab.md" },
+      { "Grid" = "reference/ui/Grid.md" },
+      { "Icon" = "reference/ui/Icon.md" },
+      { "IconButton" = "reference/ui/IconButton.md" },
+      { "Image" = "reference/ui/Image.md" },
+      { "Label" = "reference/ui/Label.md" },
+      { "List" = "reference/ui/List.md" },
+      { "NavigationBar" = "reference/ui/NavigationBar.md" },
+      { "NumberPicker" = "reference/ui/NumberPicker.md" },
+      { "ProgressBar" = "reference/ui/ProgressBar.md" },
+      { "RadioButton" = "reference/ui/RadioButton.md" },
+      { "RadioGroup" = "reference/ui/RadioGroup.md" },
+      { "Row" = "reference/ui/Row.md" },
+      { "Screen" = "reference/ui/Screen.md" },
+      { "Scroller" = "reference/ui/Scroller.md" },
+      { "Slider" = "reference/ui/Slider.md" },
+      { "Snackbar" = "reference/ui/Snackbar.md" },
+      { "Stack" = "reference/ui/Stack.md" },
+      { "Switch" = "reference/ui/Switch.md" },
+      { "Tabs" = "reference/ui/Tabs.md" },
+      { "TextArea" = "reference/ui/TextArea.md" },
+      { "TextField" = "reference/ui/TextField.md" },
+    ] },
+    { "crescent.sys" = [
+      "reference/sys/index.md",
+      { "System" = "reference/sys/System.md" },
+      { "Timer" = "reference/sys/Timer.md" },
+    ] },
+    { "crescent.fs" = [
+      "reference/fs/index.md",
+      { "FileSystem" = "reference/fs/FileSystem.md" },
+    ] },
+  ] },
+  # reference-nav:end
+  { "Samples" = "samples.md" },
+]
+
+# extra_css = ["stylesheets/extra.css"]
+# extra_javascript = ["javascripts/extra.js"]
+
+[project.theme]
+# variant = "classic"
+# custom_dir = "overrides"
+# favicon = "images/favicon.png"
+language = "en"
+features = [
+  "announce.dismiss",
+  # "content.action.edit",
+  # "content.action.view",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  # "header.autohide",
+  # "navigation.expand",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  # "navigation.instant.progress",
+  "navigation.path",
+  # "navigation.prune",
+  "navigation.sections",
+  "navigation.tabs",
+  # "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  # "toc.follow",
+  # "toc.integrate",
+]
+
+# logo = "assets/logo.png"
+
+# [project.theme.icon]
+# logo = "lucide/smile"
+
+# [project.theme.font]
+# text = "Inter"
+# code = "Jetbrains Mono"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+# [[project.extra.social]]
+# icon = "fontawesome/brands/github"
+# link = "https://github.com/user/repo"
+
+# [[project.extra.social]]
+# icon = "fontawesome/brands/mastodon"
+# link = "https://fosstodon.org/@user"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+# pymdownx.snippets.base_path = "includes"
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
