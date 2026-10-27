@@ -22,7 +22,7 @@ Setting an event again replaces the old function.
 
 | Event | When |
 |---|---|
-| `setOnClick` | tapped |
+| `setOnClick` | tapped (every widget has it, and shows a ripple) |
 | `setOnLongPress` | pressed and held (every widget has it) |
 | `setOnTextChange` | text in a field changed |
 | `setOnSubmit` | the keyboard's action key in a one-line field |
@@ -33,6 +33,10 @@ Setting an event again replaces the old function.
 | `setOnResize` | the widget's size changed |
 | `setOnScroll` | a scroller moved |
 | `setOnClose` | a screen went away |
+
+Every widget can be tapped, not only buttons: a `Label`, an `Image`, a `Card` or a whole `Row` can take
+`setOnClick`. Widgets that handle touch themselves, such as text fields, sliders and lists, keep that
+behaviour, and for them `setOnClick` fires only when the tap lands outside the part they handle.
 
 Each widget's page in the [reference](../reference/ui/index.md) lists its events.
 

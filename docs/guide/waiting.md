@@ -18,6 +18,14 @@ if name then rename(old, name) end
 ui.Dialogs.toast("Copied")                                   -- does not wait
 ```
 
+`pickDate` shows a calendar and waits. It returns the day as `"YYYY-MM-DD"`, or `nil` if the user
+cancelled. Both arguments are optional: a title, and the date to start on (today by default).
+
+```lua
+local day = ui.Dialogs.pickDate("Delivery day", "2026-12-24")
+if day then order:setDate(day) end
+```
+
 For a message with an action that does not block, use a snackbar:
 
 ```lua

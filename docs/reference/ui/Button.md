@@ -45,6 +45,14 @@ Button:focus()
 
 Moves keyboard focus here.
 
+### `getCornerRadius`
+
+```lua
+Button:getCornerRadius()
+```
+
+The corner radius set with setCornerRadius, in dp.
+
 ### `setBackgroundColor`
 
 ```lua
@@ -60,6 +68,14 @@ Button:setBold(bold: boolean)
 ```
 
 Bold text on or off.
+
+### `setCornerRadius`
+
+```lua
+Button:setCornerRadius(dp: number)
+```
+
+How rounded the corners are, in dp: one value for all four. A large value makes a pill.
 
 ### `setHeight`
 

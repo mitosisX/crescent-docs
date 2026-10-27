@@ -9,6 +9,7 @@ Layouts hold other widgets. Pick the one whose shape matches what you want.
 | [`Stack`](../reference/ui/Stack.md) | children on top of each other |
 | [`Grid`](../reference/ui/Grid.md) | children in a grid |
 | [`Scroller`](../reference/ui/Scroller.md) | one child that scrolls |
+| [`Pager`](../reference/ui/Pager.md) | pages you swipe sideways |
 | [`Card`](../reference/ui/Card.md) | one child on a rounded, raised panel |
 
 Layouts with many children use `addChild`. Layouts with exactly one use `setContent`.
@@ -22,7 +23,8 @@ form:addChild(ui.TextField())
 form:addChild(ui.Button("Save"))
 ```
 
-`setSpacing` puts space between children; `setMargins` puts space around the layout.
+`setSpacing` puts space between children; `setMargins` puts space around the layout. Spacing never
+changes a child's own margins, so a child with `setMargins` keeps exactly the margins you gave it.
 
 ### Sharing the space
 
@@ -52,6 +54,15 @@ photo:addChild(ui.Label("New"), "top")
 The second argument places the child: `"center"`, `"top"`, `"bottom"`, `"left"`, `"right"`, or
 `"fill"` to cover the whole stack. Later children are drawn on top.
 
+Two words pick a corner: `"top right"`, `"top left"`, `"bottom right"` or `"bottom left"`. A badge in
+the corner of a picture:
+
+```lua
+photo:addChild(ui.Label("-20%"), "top right")
+```
+
+Anywhere a widget takes an alignment, two words like these work (`setAlign("top right")`).
+
 ## Scroller
 
 When the content is taller than the screen, wrap it in a `Scroller`:
@@ -64,6 +75,23 @@ screen:setContent(ui.Scroller():setContent(page))
 
 `setHorizontal(true)` scrolls sideways instead: a row of cards, a carousel.
 
+## Pager
+
+A `Pager` shows one page at a time and lets the user swipe between them: a banner carousel, a
+walkthrough. Give it a height, then add the pages:
+
+```lua
+local banner = ui.Pager():setHeight(160):setDots(true)
+banner:addChild(ui.Image("assets/sale.jpg"))
+banner:addChild(ui.Image("assets/new.jpg"))
+banner:addChild(ui.Image("assets/gift.jpg"))
+banner:setOnSelect(function(_, index) print("now on page", index) end)
+```
+
+`setDots(true)` draws small dots beneath the pages, one per page, with the open page highlighted.
+The dots follow the app's theme colours. `setOnSelect` runs when a different page comes into view.
+A `Pager` needs `setHeight`; without one it has nothing to size itself by.
+
 ## Card
 
 ```lua
@@ -73,6 +101,14 @@ card:setOnClick(function() ... end)
 ```
 
 A card's `setMargins` is the space *inside* it, around its content.
+
+A card has no outline. `setOutlined(true)` draws a thin one. `setAlign` places the content inside
+the card: `"center"` centres it, and two words such as `"top right"` work too. The default,
+`"fill"`, stretches it across the card's width.
+
+```lua
+local tile = ui.Card():setOutlined(true):setAlign("center")
+```
 
 ## Sizes
 

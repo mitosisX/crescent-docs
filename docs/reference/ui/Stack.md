@@ -28,7 +28,7 @@ Each property has a getter and a setter: `getName()` / `setName(value)`; boolean
 Stack:addChild(child: any, align?: string)
 ```
 
-Adds a widget on top of the others; align places it ("center", "top", "bottom", "left", "right"...), or "fill" covers the whole stack, as a background does.
+Adds a widget on top of the others; align places it ("center", "top", "bottom", "left", "right", or a corner as two words: "top right", "top left", "bottom right", "bottom left"), or "fill" covers the whole stack, as a background does.
 
 ### `clear`
 
@@ -121,6 +121,14 @@ Fixed width in dp.
 ## Events
 
 Every handler receives the widget first, then the values listed.
+
+### `setOnClick`
+
+```lua
+Stack:setOnClick(function(widget) end)
+```
+
+Fired when the widget is tapped. A tap on a widget with its own touch handling (a text field's text area, a slider's track, a list's items) goes to that widget, so this fires only outside it: use its own event (setOnTextChange, setOnValueChange, setOnItemSelect).
 
 ### `setOnLongPress`
 

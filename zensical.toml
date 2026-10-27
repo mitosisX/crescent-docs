@@ -42,6 +42,7 @@ nav = [
       { "List" = "reference/ui/List.md" },
       { "NavigationBar" = "reference/ui/NavigationBar.md" },
       { "NumberPicker" = "reference/ui/NumberPicker.md" },
+      { "Pager" = "reference/ui/Pager.md" },
       { "ProgressBar" = "reference/ui/ProgressBar.md" },
       { "RadioButton" = "reference/ui/RadioButton.md" },
       { "RadioGroup" = "reference/ui/RadioGroup.md" },

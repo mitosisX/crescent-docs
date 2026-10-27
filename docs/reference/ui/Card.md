@@ -15,8 +15,10 @@ Each property has a getter and a setter: `getName()` / `setName(value)`; boolean
 
 | Property | Type | What it is |
 |---|---|---|
+| `align` | `string` | Where the content sits inside the card: "top", "center", "bottom right", ...; "fill" (the default) stretches it across the width |
 | `description` | `string` | What a screen reader says for this widget, and the tip shown on a long press nobody handles |
 | `enabled` | `boolean` | Whether the widget reacts to touch |
+| `outlined` | `boolean` | Whether the card has a thin outline; cards have none by default |
 | `style` | `string` | A CSS subset: font-size, font-weight, color, background-color, padding, border-radius |
 | `visible` | `boolean` | Whether the widget is shown |
 
@@ -101,14 +103,6 @@ Card:setMinWidth(width: number)
 ```
 
 Smallest width in dp.
-
-### `setOutlined`
-
-```lua
-Card:setOutlined(on: boolean)
-```
-
-Draws an outline instead of a shadow.
 
 ### `setSize`
 

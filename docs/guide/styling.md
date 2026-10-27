@@ -72,6 +72,18 @@ badge:setStyle("background-color: primary; color: onPrimary; padding: 4dp; borde
 It understands `font-size`, `font-weight`, `color`, `background-color`, `padding` and
 `border-radius`.
 
+## Cards and buttons
+
+A `Card` has no outline by default; `setOutlined(true)` draws a thin one. If you drew your own border
+to get this look, you can drop it.
+
+`Button:setCornerRadius(dp)` rounds a button's corners. A radius of half the button's height makes a
+pill:
+
+```lua
+ui.Button("Order now"):setCornerRadius(28)
+```
+
 ## Rounded corners
 
 `Card`, `Image` and `TextField` take `setCornerRadius`: one value for all corners, two for top then

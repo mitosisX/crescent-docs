@@ -8,6 +8,15 @@ home:setContent(list)
 home:show()
 ```
 
+## Status bar colour
+
+`setStatusBarColor` sets the colour of the bar at the very top of the phone, where the clock is. It
+takes any [colour](styling.md#colours); the icons switch between light and dark to stay readable.
+
+```lua
+home:setStatusBarColor("#FBF7EF")
+```
+
 ## Going to another screen
 
 Showing a screen puts it on top of the current one. Back, or `close()`, returns.

@@ -17,6 +17,7 @@ Each property has a getter and a setter: `getName()` / `setName(value)`; boolean
 |---|---|---|
 | `description` | `string` | What a screen reader says for this widget, and the tip shown on a long press nobody handles |
 | `enabled` | `boolean` | Whether the widget reacts to touch |
+| `statusBarColor` | `string` | The colour behind the status bar while this screen is on top, a "#rrggbb" or a theme role ("" = the theme's own); the icons turn light or dark to read on it |
 | `style` | `string` | A CSS subset: font-size, font-weight, color, background-color, padding, border-radius |
 | `subtitle` | `string` | A smaller line under the title |
 | `title` | `string` | The top bar's title (no title, no bar) |
@@ -147,6 +148,14 @@ Shows the screen, on top of any screen already shown.
 ## Events
 
 Every handler receives the widget first, then the values listed.
+
+### `setOnClick`
+
+```lua
+Screen:setOnClick(function(widget) end)
+```
+
+Fired when the widget is tapped. A tap on a widget with its own touch handling (a text field's text area, a slider's track, a list's items) goes to that widget, so this fires only outside it: use its own event (setOnTextChange, setOnValueChange, setOnItemSelect).
 
 ### `setOnClose`
 

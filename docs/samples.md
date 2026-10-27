@@ -16,11 +16,14 @@ Shows: [theme roles](guide/styling.md), [text roles](guide/styling.md#text-roles
 
 ## Flower shop
 
-A real shop design rebuilt in Lua: a login over a photo, then a shop with a sliding banner,
-categories and a sideways list of bouquets.
+A real shop design rebuilt in Lua: a splash screen, a login over a photo, then the shop home with a
+swipeable banner, categories, a sideways list of popular bouquets and a floating bottom bar. The
+cart and checkout are not built yet.
 
-Shows: [`Stack`](guide/layouts.md#stack), sideways [`Scroller`](guide/layouts.md#scroller),
-per-corner radius, and bundled fonts.
+Shows: [`Pager`](guide/layouts.md#pager), [`Stack`](guide/layouts.md#stack) with corner placement,
+sideways [`Scroller`](guide/layouts.md#scroller), [outlined cards](guide/styling.md#cards-and-buttons),
+pill buttons, [`setStatusBarColor`](guide/screens.md#status-bar-colour), per-corner radius, and
+bundled fonts.
 
 ## Notes
 

@@ -162,6 +162,14 @@ Fixed width in dp.
 
 Every handler receives the widget first, then the values listed.
 
+### `setOnClick`
+
+```lua
+Row:setOnClick(function(widget) end)
+```
+
+Fired when the widget is tapped. A tap on a widget with its own touch handling (a text field's text area, a slider's track, a list's items) goes to that widget, so this fires only outside it: use its own event (setOnTextChange, setOnValueChange, setOnItemSelect).
+
 ### `setOnLongPress`
 
 ```lua

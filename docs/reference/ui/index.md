@@ -21,6 +21,7 @@ local ui = require("crescent.ui")
 | [List](List.md) | A scrolling list of text items. Positions count from 1. |
 | [NavigationBar](NavigationBar.md) | A bar of icon items along the bottom, each showing its own widget above it. Positions count from 1. |
 | [NumberPicker](NumberPicker.md) | A number with - and + buttons (for a list of choices use Dropdown). |
+| [Pager](Pager.md) | Pages you swipe through, one child per page, with optional dots. Give it a height (setHeight): pages fill the Pager. Positions count from 1. |
 | [ProgressBar](ProgressBar.md) | A bar showing progress (default 0..100), or a spinning one while you wait. |
 | [RadioButton](RadioButton.md) | One choice in a RadioGroup; picking it clears the others. |
 | [RadioGroup](RadioGroup.md) | Holds RadioButtons so only one is picked at a time. Positions count from 1. |

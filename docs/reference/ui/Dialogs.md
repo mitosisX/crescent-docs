@@ -20,6 +20,14 @@ Dialogs.confirm(title: string, message: string)
 
 Asks a yes/no question; returns true for Yes.
 
+### `pickDate`
+
+```lua
+Dialogs.pickDate(title?: string?, date?: string?)
+```
+
+Shows a date picker; returns the chosen date as "YYYY-MM-DD", or nil if cancelled. `date` is the starting date in the same form (default today).
+
 ### `prompt`
 
 ```lua
