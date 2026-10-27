@@ -6,8 +6,6 @@ site_author = "Naveto Tech"
 
 copyright = "Copyright &copy; 2026 Naveto Tech"
 
-repo_url = "https://github.com/mitosisX/crescent-android-lua"
-repo_name = "mitosisX/crescent-android-lua"
 
 nav = [
   { "Home" = "index.md" },
@@ -25,7 +23,7 @@ nav = [
     { "Files" = "guide/files.md" },
     { "Using Android directly" = "guide/java.md" },
   ] },
-  # reference-nav:start (written by scripts/gen_reference.py)
+  # reference-nav:start
   { "Reference" = [
     { "crescent.ui" = [
       "reference/ui/index.md",
