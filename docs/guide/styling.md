@@ -38,6 +38,45 @@ Also: `background`, `onBackground`, `surfaceDim`, `surfaceBright`, `outline`, `o
 
 `sys.System.isDarkMode()` says whether the phone is in dark mode.
 
+## Your app's colours
+
+The colours above come from the phone's theme. To give your app colours of its own, set a
+theme at the top of your script, before any widget is made:
+
+```lua
+ui.Theme.set { color = "#805610" }
+```
+
+One colour is enough: the rest of the theme grows from it, both for light mode and for dark,
+the way the [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
+does. Secondary and tertiary come out as rotations of your colour, so an amber app gets a
+green accent without asking for one.
+
+If you already have a palette, give the roles themselves. A theme is a **pair**: the colours
+for light and the colours for dark, because the phone decides which one it shows.
+
+```lua
+ui.Theme.set {
+  light = { primary = "#805610", surface = "#FFF8F4", surfaceVariant = "#F0E0CF" },
+  dark  = { primary = "#F4BD6F", surface = "#18120B", surfaceVariant = "#4F4539" },
+}
+```
+
+Both together work too: start from a colour and change the few roles you care about.
+
+### Light or dark
+
+The phone chooses by default. To decide for it:
+
+```lua
+ui.Theme.setDarkMode(true)      -- or false, or "auto" to go back to the phone
+```
+
+`ui.Theme.isDarkMode()` says which half is showing, and `ui.Theme.clear()` gives the colours
+back to the phone. When the phone turns dark while your app is open, everything you coloured
+by *role* changes with it; a widget you gave an exact colour like `"#FF8A00"` keeps it, since
+that is what you asked for.
+
 ## Gradients
 
 Every widget takes `setGradient(from, to)`: two [colours](#colours) and, if you like, a direction.

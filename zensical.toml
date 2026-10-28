@@ -65,6 +65,7 @@ nav = [
       { "Tabs" = "reference/ui/Tabs.md" },
       { "TextArea" = "reference/ui/TextArea.md" },
       { "TextField" = "reference/ui/TextField.md" },
+      { "Theme" = "reference/ui/Theme.md" },
     ] },
     { "crescent.sys" = [
       "reference/sys/index.md",

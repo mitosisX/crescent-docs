@@ -44,3 +44,4 @@ local ui = require("crescent.ui")
 | [Tabs](Tabs.md) | A row of tabs, each showing its own widget underneath. Positions count from 1. |
 | [TextArea](TextArea.md) | A multi-line text field, in a Material box with a floating label. |
 | [TextField](TextField.md) | A one-line text field, in a Material box with a floating label. |
+| [Theme](Theme.md) | The app's colours: one call at the top of your script sets them for every widget. |
