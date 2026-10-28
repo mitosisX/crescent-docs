@@ -10,7 +10,8 @@ avatars and star buttons, a search field, a floating Compose button that shrinks
 bottom navigation bar, and a thread screen. Long-press a card to select it. Turn the phone sideways
 and the list and the thread sit side by side.
 
-Shows: [theme roles](guide/styling.md), [text roles](guide/styling.md#text-roles),
+Shows: [an app's own colours](guide/styling.md#your-apps-colours) (Reply's amber, both halves, in
+`theme.lua`), [theme roles](guide/styling.md), [text roles](guide/styling.md#text-roles),
 [icons](guide/icons.md), [`NavigationBar`](reference/ui/NavigationBar.md),
 [`setOnResize`](guide/layouts.md#sizes) and [`setOnScroll`](guide/screens.md#the-floating-button).
 
