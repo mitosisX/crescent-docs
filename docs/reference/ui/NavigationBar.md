@@ -46,6 +46,14 @@ NavigationBar:focus()
 
 Moves keyboard focus here.
 
+### `getBadge`
+
+```lua
+NavigationBar:getBadge()
+```
+
+What the badge shows, or "" if there is none.
+
 ### `getItemCount`
 
 ```lua
@@ -62,6 +70,14 @@ NavigationBar:getItemLabel(index: integer)
 
 The label of an item (from 1), or nil.
 
+### `getMenu`
+
+```lua
+NavigationBar:getMenu()
+```
+
+The widget's menu items.
+
 ### `getSelectedIndex`
 
 ```lua
@@ -69,6 +85,14 @@ NavigationBar:getSelectedIndex()
 ```
 
 The open item (from 1), or 0 if there are none.
+
+### `openMenu`
+
+```lua
+NavigationBar:openMenu()
+```
+
+Opens the widget's menu, as a long press would.
 
 ### `setBackgroundColor`
 
@@ -78,6 +102,22 @@ NavigationBar:setBackgroundColor(color: string|integer)
 
 Background colour: "#rrggbb", a name like "red", a theme role like "primaryContainer", or an ARGB integer.
 
+### `setBadge`
+
+```lua
+NavigationBar:setBadge(value: integer|string|nil)
+```
+
+Puts a badge over the widget's top right corner: a number (0 removes it), a short piece of text, or nil to remove it.
+
+### `setGradient`
+
+```lua
+NavigationBar:setGradient(from: string|integer, to: string|integer, direction?: string)
+```
+
+Fills the background with a gradient from one colour to another. The direction is "down" (the default), "up", "left", "right", "down right", "down left", "up right", "up left", "out" for a circle spreading from the middle, or "around" for a sweep.
+
 ### `setHeight`
 
 ```lua
@@ -86,6 +126,14 @@ NavigationBar:setHeight(height: number)
 
 Fixed height in dp.
 
+### `setItemBadge`
+
+```lua
+NavigationBar:setItemBadge(index: integer, value: integer|string|nil)
+```
+
+Puts a badge over an item's icon (positions from 1): a number (0 removes it), a short piece of text, or nil to remove it.
+
 ### `setMargins`
 
 ```lua
@@ -93,6 +141,14 @@ NavigationBar:setMargins(left: number, top?: number, right?: number, bottom?: nu
 ```
 
 Space around the widget in dp: one value for all sides, two for vertical and horizontal, or left, top, right, bottom.
+
+### `setMenu`
+
+```lua
+NavigationBar:setMenu(items: string[])
+```
+
+Gives the widget a menu that opens on a long press. Replaces setOnLongPress; an empty list removes it.
 
 ### `setMinHeight`
 
@@ -153,6 +209,14 @@ NavigationBar:setOnLongPress(function(widget) end)
 ```
 
 Fired when the user presses and holds the widget.
+
+### `setOnMenuSelect`
+
+```lua
+NavigationBar:setOnMenuSelect(function(widget, item: string, index: integer) end)
+```
+
+Fired with (item, index) when the user picks something from the widget's menu.
 
 ### `setOnResize`
 

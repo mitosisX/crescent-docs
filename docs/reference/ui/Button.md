@@ -45,6 +45,14 @@ Button:focus()
 
 Moves keyboard focus here.
 
+### `getBadge`
+
+```lua
+Button:getBadge()
+```
+
+What the badge shows, or "" if there is none.
+
 ### `getCornerRadius`
 
 ```lua
@@ -53,13 +61,45 @@ Button:getCornerRadius()
 
 The corner radius set with setCornerRadius, in dp.
 
+### `getMenu`
+
+```lua
+Button:getMenu()
+```
+
+The widget's menu items.
+
+### `getVariant`
+
+```lua
+Button:getVariant()
+```
+
+The look set with setVariant.
+
+### `openMenu`
+
+```lua
+Button:openMenu()
+```
+
+Opens the widget's menu, as a long press would.
+
 ### `setBackgroundColor`
 
 ```lua
 Button:setBackgroundColor(color: string|integer)
 ```
 
-Background colour: "#rrggbb", a name like "red", a theme role like "primaryContainer", or an ARGB integer. Keeps the button's shape.
+Background colour: "#rrggbb", a name like "red", a theme role like "primaryContainer", or an ARGB integer. Keeps the button's shape, and replaces a gradient.
+
+### `setBadge`
+
+```lua
+Button:setBadge(value: integer|string|nil)
+```
+
+Puts a badge over the widget's top right corner: a number (0 removes it), a short piece of text, or nil to remove it.
 
 ### `setBold`
 
@@ -77,6 +117,14 @@ Button:setCornerRadius(dp: number)
 
 How rounded the corners are, in dp: one value for all four. A large value makes a pill.
 
+### `setGradient`
+
+```lua
+Button:setGradient(from: string|integer, to: string|integer, direction?: string)
+```
+
+Fills the button with a gradient from one colour to another, keeping its corners. The direction is "down" (the default), "up", "left", "right", "down right", "down left", "up right", "up left", "out" for a circle spreading from the middle, or "around" for a sweep.
+
 ### `setHeight`
 
 ```lua
@@ -92,6 +140,14 @@ Button:setMargins(left: number, top?: number, right?: number, bottom?: number)
 ```
 
 Space around the widget in dp: one value for all sides, two for vertical and horizontal, or left, top, right, bottom.
+
+### `setMenu`
+
+```lua
+Button:setMenu(items: string[])
+```
+
+Gives the widget a menu that opens on a long press. Replaces setOnLongPress; an empty list removes it.
 
 ### `setMinHeight`
 
@@ -133,6 +189,14 @@ Button:setTextSize(size: number)
 
 Text size in sp.
 
+### `setVariant`
+
+```lua
+Button:setVariant(name: string)
+```
+
+How the button looks: "filled" (the default), "tonal", "elevated", "outlined" or "text".
+
 ### `setWidth`
 
 ```lua
@@ -168,6 +232,14 @@ Button:setOnLongPress(function(widget) end)
 ```
 
 Fired when the user presses and holds the widget.
+
+### `setOnMenuSelect`
+
+```lua
+Button:setOnMenuSelect(function(widget, item: string, index: integer) end)
+```
+
+Fired with (item, index) when the user picks something from the widget's menu.
 
 ### `setOnResize`
 

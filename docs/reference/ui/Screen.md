@@ -49,6 +49,14 @@ Screen:close()
 
 Closes the screen and returns to the one under it.
 
+### `closeDrawer`
+
+```lua
+Screen:closeDrawer()
+```
+
+Slides the drawer away.
+
 ### `focus`
 
 ```lua
@@ -65,6 +73,54 @@ Screen:getActionCount()
 
 How many actions the top bar has.
 
+### `getBadge`
+
+```lua
+Screen:getBadge()
+```
+
+What the badge shows, or "" if there is none.
+
+### `getBarSize`
+
+```lua
+Screen:getBarSize()
+```
+
+The bar size set with setBarSize.
+
+### `getMenu`
+
+```lua
+Screen:getMenu()
+```
+
+The widget's menu items.
+
+### `isDrawerOpen`
+
+```lua
+Screen:isDrawerOpen()
+```
+
+Whether the drawer is out.
+
+### `openDrawer`
+
+```lua
+Screen:openDrawer()
+```
+
+Slides the drawer out.
+
+### `openMenu`
+
+```lua
+Screen:openMenu()
+```
+
+Opens the widget's menu, as a long press would.
+
 ### `setBackgroundColor`
 
 ```lua
@@ -72,6 +128,22 @@ Screen:setBackgroundColor(color: string|integer)
 ```
 
 Background colour: "#rrggbb", a name like "red", a theme role like "primaryContainer", or an ARGB integer.
+
+### `setBadge`
+
+```lua
+Screen:setBadge(value: integer|string|nil)
+```
+
+Puts a badge over the widget's top right corner: a number (0 removes it), a short piece of text, or nil to remove it.
+
+### `setBarSize`
+
+```lua
+Screen:setBarSize(name: string)
+```
+
+How tall the top bar is: "small" (the default), "medium" or "large". A tall bar gives the title its own room, the way Settings and Photos do.
 
 ### `setContent`
 
@@ -81,6 +153,14 @@ Screen:setContent(content: any)
 
 Sets what the screen shows (usually a layout).
 
+### `setDrawer`
+
+```lua
+Screen:setDrawer(panel: any)
+```
+
+Puts a panel behind the left edge that slides out when the user taps the top bar's menu icon or drags from the edge. Needs a title, since the icon lives in the top bar.
+
 ### `setFab`
 
 ```lua
@@ -88,6 +168,14 @@ Screen:setFab(fab: any)
 ```
 
 Puts a Fab over the content, bottom right.
+
+### `setGradient`
+
+```lua
+Screen:setGradient(from: string|integer, to: string|integer, direction?: string)
+```
+
+Fills the background with a gradient from one colour to another. The direction is "down" (the default), "up", "left", "right", "down right", "down left", "up right", "up left", "out" for a circle spreading from the middle, or "around" for a sweep.
 
 ### `setHeight`
 
@@ -104,6 +192,14 @@ Screen:setMargins(left: number, top?: number, right?: number, bottom?: number)
 ```
 
 Inner padding in dp: one value, vertical and horizontal, or left, top, right, bottom.
+
+### `setMenu`
+
+```lua
+Screen:setMenu(items: string[])
+```
+
+Gives the widget a menu that opens on a long press. Replaces setOnLongPress; an empty list removes it.
 
 ### `setMinHeight`
 
@@ -172,6 +268,14 @@ Screen:setOnLongPress(function(widget) end)
 ```
 
 Fired when the user presses and holds the widget.
+
+### `setOnMenuSelect`
+
+```lua
+Screen:setOnMenuSelect(function(widget, item: string, index: integer) end)
+```
+
+Fired with (item, index) when the user picks something from the widget's menu.
 
 ### `setOnResize`
 

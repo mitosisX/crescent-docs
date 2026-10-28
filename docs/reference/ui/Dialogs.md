@@ -28,6 +28,14 @@ Dialogs.pickDate(title?: string?, date?: string?)
 
 Shows a date picker; returns the chosen date as "YYYY-MM-DD", or nil if cancelled. `date` is the starting date in the same form (default today).
 
+### `pickTime`
+
+```lua
+Dialogs.pickTime(title?: string?, time?: string?)
+```
+
+Shows a time picker; returns the chosen time as "HH:MM" on a 24 hour clock, or nil if cancelled. `time` is the starting time in the same form (default now). The dial itself follows the phone's 12 or 24 hour setting.
+
 ### `prompt`
 
 ```lua

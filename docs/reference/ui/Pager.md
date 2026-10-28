@@ -19,6 +19,7 @@ Each property has a getter and a setter: `getName()` / `setName(value)`; boolean
 | `dots` | `boolean` | Whether small dots under the pages show which one is open; false by default |
 | `enabled` | `boolean` | Whether the widget reacts to touch |
 | `style` | `string` | A CSS subset: font-size, font-weight, color, background-color, padding, border-radius |
+| `vertical` | `boolean` | Whether pages are swiped up and down instead of sideways |
 | `visible` | `boolean` | Whether the widget is shown |
 
 ## Methods
@@ -47,6 +48,22 @@ Pager:focus()
 
 Moves keyboard focus here.
 
+### `getAutoAdvance`
+
+```lua
+Pager:getAutoAdvance()
+```
+
+The auto-advance time in seconds, or 0.
+
+### `getBadge`
+
+```lua
+Pager:getBadge()
+```
+
+What the badge shows, or "" if there is none.
+
 ### `getChildCount`
 
 ```lua
@@ -54,6 +71,22 @@ Pager:getChildCount()
 ```
 
 How many pages there are.
+
+### `getMenu`
+
+```lua
+Pager:getMenu()
+```
+
+The widget's menu items.
+
+### `getPeek`
+
+```lua
+Pager:getPeek()
+```
+
+The peek width in dp.
 
 ### `getSelectedIndex`
 
@@ -63,6 +96,22 @@ Pager:getSelectedIndex()
 
 The page showing (from 1), or 0 if there are none.
 
+### `openMenu`
+
+```lua
+Pager:openMenu()
+```
+
+Opens the widget's menu, as a long press would.
+
+### `setAutoAdvance`
+
+```lua
+Pager:setAutoAdvance(seconds: number)
+```
+
+Moves to the next page by itself every so many seconds, wrapping round at the end. 0 (the default) stops it.
+
 ### `setBackgroundColor`
 
 ```lua
@@ -70,6 +119,22 @@ Pager:setBackgroundColor(color: string|integer)
 ```
 
 Background colour: "#rrggbb", a name like "red", a theme role like "primaryContainer", or an ARGB integer.
+
+### `setBadge`
+
+```lua
+Pager:setBadge(value: integer|string|nil)
+```
+
+Puts a badge over the widget's top right corner: a number (0 removes it), a short piece of text, or nil to remove it.
+
+### `setGradient`
+
+```lua
+Pager:setGradient(from: string|integer, to: string|integer, direction?: string)
+```
+
+Fills the background with a gradient from one colour to another. The direction is "down" (the default), "up", "left", "right", "down right", "down left", "up right", "up left", "out" for a circle spreading from the middle, or "around" for a sweep.
 
 ### `setHeight`
 
@@ -87,6 +152,14 @@ Pager:setMargins(left: number, top?: number, right?: number, bottom?: number)
 
 Space around the widget in dp: one value for all sides, two for vertical and horizontal, or left, top, right, bottom.
 
+### `setMenu`
+
+```lua
+Pager:setMenu(items: string[])
+```
+
+Gives the widget a menu that opens on a long press. Replaces setOnLongPress; an empty list removes it.
+
 ### `setMinHeight`
 
 ```lua
@@ -102,6 +175,14 @@ Pager:setMinWidth(width: number)
 ```
 
 Smallest width in dp.
+
+### `setPeek`
+
+```lua
+Pager:setPeek(dp: number)
+```
+
+How much of the next page peeks in at the side, in dp. 0 (the default) shows one page at a time.
 
 ### `setSelectedIndex`
 
@@ -146,6 +227,14 @@ Pager:setOnLongPress(function(widget) end)
 ```
 
 Fired when the user presses and holds the widget.
+
+### `setOnMenuSelect`
+
+```lua
+Pager:setOnMenuSelect(function(widget, item: string, index: integer) end)
+```
+
+Fired with (item, index) when the user picks something from the widget's menu.
 
 ### `setOnResize`
 

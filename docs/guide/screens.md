@@ -47,6 +47,48 @@ end)
 
 The description is what TalkBack reads for the icon. Icon names are [Material icons](icons.md).
 
+`setBarSize` gives the title its own room, the way Settings and Photos do: `"small"` is the default,
+`"medium"` and `"large"` are taller.
+
+```lua
+thread:setBarSize("large")
+```
+
+## A side menu
+
+`setDrawer` puts a panel behind the left edge. The top bar's menu icon, or a drag from the edge,
+slides it out:
+
+```lua
+local menu = ui.Column():setMargins(16)
+menu:addChild(ui.Label("Flowers"):setTextRole("titleMedium"))
+menu:addChild(ui.Button("All"):setVariant("text"):setOnClick(function() home:closeDrawer() end))
+home:setDrawer(menu)
+```
+
+A screen with a drawer shows the menu icon in place of the back arrow, so drawers belong on your
+first screen. `openDrawer()` and `closeDrawer()` work from code.
+
+## Sheets
+
+A [`Sheet`](../reference/ui/Sheet.md) slides up from the bottom over the screen: a filter, a share
+list, the details of the thing the user just tapped. It is the only widget besides a screen with
+`show` and `close`, because it is somewhere the user goes:
+
+```lua
+local filters = ui.Sheet()
+filters:setContent(ui.Column():setSpacing(12)
+  :addChild(ui.Label("Sort by"):setTextRole("titleMedium"))
+  :addChild(ui.SegmentedButton():addItem("Newest"):addItem("Cheapest")))
+filters:setOnClose(function() applyFilters() end)
+
+sortButton:setOnClick(function() filters:show() end)
+```
+
+The user drags it down or taps outside to dismiss it; `close()` does the same from code.
+`setPeek(240)` sets how much shows before they drag it up, and `setExpanded(true)` opens it all the
+way.
+
 ## A bottom bar
 
 For apps with a few top-level places, use a [`NavigationBar`](../reference/ui/NavigationBar.md). Each

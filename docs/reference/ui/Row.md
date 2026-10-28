@@ -62,6 +62,14 @@ Row:focus()
 
 Moves keyboard focus here.
 
+### `getBadge`
+
+```lua
+Row:getBadge()
+```
+
+What the badge shows, or "" if there is none.
+
 ### `getChildAt`
 
 ```lua
@@ -78,6 +86,14 @@ Row:getChildCount()
 
 How many children the layout has.
 
+### `getMenu`
+
+```lua
+Row:getMenu()
+```
+
+The widget's menu items.
+
 ### `getSpacing`
 
 ```lua
@@ -85,6 +101,14 @@ Row:getSpacing()
 ```
 
 Space between children, in dp.
+
+### `openMenu`
+
+```lua
+Row:openMenu()
+```
+
+Opens the widget's menu, as a long press would.
 
 ### `setAlign`
 
@@ -102,6 +126,22 @@ Row:setBackgroundColor(color: string|integer)
 
 Background colour: "#rrggbb", a name like "red", a theme role like "primaryContainer", or an ARGB integer.
 
+### `setBadge`
+
+```lua
+Row:setBadge(value: integer|string|nil)
+```
+
+Puts a badge over the widget's top right corner: a number (0 removes it), a short piece of text, or nil to remove it.
+
+### `setGradient`
+
+```lua
+Row:setGradient(from: string|integer, to: string|integer, direction?: string)
+```
+
+Fills the background with a gradient from one colour to another. The direction is "down" (the default), "up", "left", "right", "down right", "down left", "up right", "up left", "out" for a circle spreading from the middle, or "around" for a sweep.
+
 ### `setHeight`
 
 ```lua
@@ -117,6 +157,14 @@ Row:setMargins(left: number, top?: number, right?: number, bottom?: number)
 ```
 
 Inner padding in dp: one value, vertical and horizontal, or left, top, right, bottom.
+
+### `setMenu`
+
+```lua
+Row:setMenu(items: string[])
+```
+
+Gives the widget a menu that opens on a long press. Replaces setOnLongPress; an empty list removes it.
 
 ### `setMinHeight`
 
@@ -177,6 +225,14 @@ Row:setOnLongPress(function(widget) end)
 ```
 
 Fired when the user presses and holds the widget.
+
+### `setOnMenuSelect`
+
+```lua
+Row:setOnMenuSelect(function(widget, item: string, index: integer) end)
+```
+
+Fired with (item, index) when the user picks something from the widget's menu.
 
 ### `setOnResize`
 

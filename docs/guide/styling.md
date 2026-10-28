@@ -38,6 +38,31 @@ Also: `background`, `onBackground`, `surfaceDim`, `surfaceBright`, `outline`, `o
 
 `sys.System.isDarkMode()` says whether the phone is in dark mode.
 
+## Gradients
+
+Every widget takes `setGradient(from, to)`: two [colours](#colours) and, if you like, a direction.
+
+```lua
+header:setGradient("#ff8a00", "#ff0058", "down right")
+ui.Button("Order now"):setCornerRadius(28):setGradient("primary", "tertiary", "right")
+```
+
+The direction is `"down"` (the default), `"up"`, `"left"`, `"right"`, or two words for a diagonal:
+`"down right"`, `"up left"`. `"out"` spreads a circle from the middle and `"around"` sweeps round.
+A `Card` keeps its rounded shape, and a `Button` keeps its corners.
+
+## Badges
+
+`setBadge` puts the little count over a widget's top right corner: a number, a short piece of text,
+or `0` to take it away.
+
+```lua
+ui.IconButton("mail", "Mail"):setBadge(3)
+ui.IconButton("notifications", "Alerts"):setBadge("9+")
+```
+
+A bottom bar badges its own items: `nav:setItemBadge(1, 3)`.
+
 ## Text
 
 ### Text roles
@@ -76,6 +101,16 @@ It understands `font-size`, `font-weight`, `color`, `background-color`, `padding
 
 A `Card` has no outline by default; `setOutlined(true)` draws a thin one. If you drew your own border
 to get this look, you can drop it.
+
+Material gives buttons five looks, and `setVariant` picks one:
+
+```lua
+ui.Button("Buy"):setVariant("filled")      -- the default: solid, for the main action
+ui.Button("Save"):setVariant("tonal")      -- softer, for a second action
+ui.Button("Share"):setVariant("elevated")
+ui.Button("Cancel"):setVariant("outlined")
+ui.Button("Learn more"):setVariant("text")
+```
 
 `Button:setCornerRadius(dp)` rounds a button's corners. A radius of half the button's height makes a
 pill:
