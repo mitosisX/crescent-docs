@@ -47,7 +47,7 @@ Follows a group of boxes: this box is ticked when all of them are, shows a dash 
 ### `getBadge`
 
 ```lua
-CheckBox:getBadge()
+CheckBox:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -55,7 +55,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-CheckBox:getMenu()
+CheckBox:getMenu() --> string[]
 ```
 
 The widget's menu items.

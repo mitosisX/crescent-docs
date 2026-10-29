@@ -51,7 +51,7 @@ Moves keyboard focus here.
 ### `getAutoAdvance`
 
 ```lua
-Pager:getAutoAdvance()
+Pager:getAutoAdvance() --> number
 ```
 
 The auto-advance time in seconds, or 0.
@@ -59,7 +59,7 @@ The auto-advance time in seconds, or 0.
 ### `getBadge`
 
 ```lua
-Pager:getBadge()
+Pager:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -67,7 +67,7 @@ What the badge shows, or "" if there is none.
 ### `getChildCount`
 
 ```lua
-Pager:getChildCount()
+Pager:getChildCount() --> integer
 ```
 
 How many pages there are.
@@ -75,7 +75,7 @@ How many pages there are.
 ### `getMenu`
 
 ```lua
-Pager:getMenu()
+Pager:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -83,7 +83,7 @@ The widget's menu items.
 ### `getPeek`
 
 ```lua
-Pager:getPeek()
+Pager:getPeek() --> number
 ```
 
 The peek width in dp.
@@ -91,7 +91,7 @@ The peek width in dp.
 ### `getSelectedIndex`
 
 ```lua
-Pager:getSelectedIndex()
+Pager:getSelectedIndex() --> integer
 ```
 
 The page showing (from 1), or 0 if there are none.

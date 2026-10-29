@@ -38,7 +38,8 @@ That is the whole app.
 
 -   :lucide-layout-dashboard: **[Guide](guide/layouts.md)**
 
-    Layouts, screens, events, colours, icons, files, and Android's own classes.
+    Layouts, screens, events, colours, icons, files, the web, background work, and Android's own
+    classes.
 
 -   :lucide-book-open: **[Reference](reference/ui/index.md)**
 
@@ -55,6 +56,6 @@ That is the whole app.
 - **Phone first.** You write, run and build on the phone itself. Every name in the API is chosen for
   someone holding a phone: there is a `setOnLongPress`, not a right-click.
 - **Real Lua.** Not a dialect: Lua 5.5.
-- **Waiting is easy.** `ui.Dialogs.confirm(...)` returns the answer. The screen keeps working while
-  your script waits; no callbacks needed.
+- **Waiting is easy.** `ui.Dialogs.confirm(...)` returns the answer, and so does
+  `net.Http.get(url)`. The screen keeps working while your script waits; no callbacks needed.
 - **All of Android is there.** Anything the API does not cover is one `java.import` away.

@@ -34,7 +34,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Divider:getBadge()
+Divider:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -42,7 +42,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-Divider:getMenu()
+Divider:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -50,7 +50,7 @@ The widget's menu items.
 ### `getThickness`
 
 ```lua
-Divider:getThickness()
+Divider:getThickness() --> number
 ```
 
 The line's thickness in dp.

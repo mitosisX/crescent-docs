@@ -21,6 +21,8 @@ nav = [
     { "Icons" = "guide/icons.md" },
     { "Waiting" = "guide/waiting.md" },
     { "Files" = "guide/files.md" },
+    { "The web" = "guide/web.md" },
+    { "Working in the background" = "guide/background.md" },
     { "Using Android directly" = "guide/java.md" },
   ] },
   # reference-nav:start
@@ -69,8 +71,16 @@ nav = [
     ] },
     { "crescent.sys" = [
       "reference/sys/index.md",
+      { "Notify" = "reference/sys/Notify.md" },
+      { "Service" = "reference/sys/Service.md" },
       { "System" = "reference/sys/System.md" },
+      { "Task" = "reference/sys/Task.md" },
       { "Timer" = "reference/sys/Timer.md" },
+    ] },
+    { "crescent.net" = [
+      "reference/net/index.md",
+      { "Http" = "reference/net/Http.md" },
+      { "Response" = "reference/net/Response.md" },
     ] },
     { "crescent.fs" = [
       "reference/fs/index.md",

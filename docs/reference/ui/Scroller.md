@@ -34,7 +34,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Scroller:getBadge()
+Scroller:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -42,7 +42,7 @@ What the badge shows, or "" if there is none.
 ### `getContent`
 
 ```lua
-Scroller:getContent()
+Scroller:getContent() --> any
 ```
 
 What is scrolling, or nil.
@@ -50,7 +50,7 @@ What is scrolling, or nil.
 ### `getMenu`
 
 ```lua
-Scroller:getMenu()
+Scroller:getMenu() --> string[]
 ```
 
 The widget's menu items.

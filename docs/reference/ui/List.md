@@ -57,7 +57,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-List:getBadge()
+List:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -65,7 +65,7 @@ What the badge shows, or "" if there is none.
 ### `getItemAt`
 
 ```lua
-List:getItemAt(index: integer)
+List:getItemAt(index: integer) --> string?
 ```
 
 The text at a position (from 1), or nil.
@@ -73,7 +73,7 @@ The text at a position (from 1), or nil.
 ### `getItemCount`
 
 ```lua
-List:getItemCount()
+List:getItemCount() --> integer
 ```
 
 How many items there are.
@@ -81,7 +81,7 @@ How many items there are.
 ### `getMenu`
 
 ```lua
-List:getMenu()
+List:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -89,7 +89,7 @@ The widget's menu items.
 ### `getSelectedIndex`
 
 ```lua
-List:getSelectedIndex()
+List:getSelectedIndex() --> integer
 ```
 
 The selected position (from 1), or 0 if none.

@@ -48,7 +48,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Button:getBadge()
+Button:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -56,7 +56,7 @@ What the badge shows, or "" if there is none.
 ### `getCornerRadius`
 
 ```lua
-Button:getCornerRadius()
+Button:getCornerRadius() --> number
 ```
 
 The corner radius set with setCornerRadius, in dp.
@@ -64,7 +64,7 @@ The corner radius set with setCornerRadius, in dp.
 ### `getMenu`
 
 ```lua
-Button:getMenu()
+Button:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -72,7 +72,7 @@ The widget's menu items.
 ### `getVariant`
 
 ```lua
-Button:getVariant()
+Button:getVariant() --> string
 ```
 
 The look set with setVariant.

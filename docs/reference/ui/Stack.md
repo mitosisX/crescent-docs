@@ -49,7 +49,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Stack:getBadge()
+Stack:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -57,7 +57,7 @@ What the badge shows, or "" if there is none.
 ### `getChildAt`
 
 ```lua
-Stack:getChildAt(index: integer)
+Stack:getChildAt(index: integer) --> any
 ```
 
 The child at a 1-based position, or nil.
@@ -65,7 +65,7 @@ The child at a 1-based position, or nil.
 ### `getChildCount`
 
 ```lua
-Stack:getChildCount()
+Stack:getChildCount() --> integer
 ```
 
 How many children the stack has.
@@ -73,7 +73,7 @@ How many children the stack has.
 ### `getMenu`
 
 ```lua
-Stack:getMenu()
+Stack:getMenu() --> string[]
 ```
 
 The widget's menu items.

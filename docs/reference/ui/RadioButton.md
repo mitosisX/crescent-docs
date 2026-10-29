@@ -38,7 +38,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-RadioButton:getBadge()
+RadioButton:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -46,7 +46,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-RadioButton:getMenu()
+RadioButton:getMenu() --> string[]
 ```
 
 The widget's menu items.

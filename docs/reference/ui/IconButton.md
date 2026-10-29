@@ -37,7 +37,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-IconButton:getBadge()
+IconButton:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -45,7 +45,7 @@ What the badge shows, or "" if there is none.
 ### `getCheckedIcon`
 
 ```lua
-IconButton:getCheckedIcon()
+IconButton:getCheckedIcon() --> string
 ```
 
 The icon set with setCheckedIcon.
@@ -53,7 +53,7 @@ The icon set with setCheckedIcon.
 ### `getMenu`
 
 ```lua
-IconButton:getMenu()
+IconButton:getMenu() --> string[]
 ```
 
 The widget's menu items.

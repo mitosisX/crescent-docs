@@ -42,7 +42,7 @@ Empties the field.
 ### `getBadge`
 
 ```lua
-TextField:getBadge()
+TextField:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -50,7 +50,7 @@ What the badge shows, or "" if there is none.
 ### `getCornerRadius`
 
 ```lua
-TextField:getCornerRadius()
+TextField:getCornerRadius() --> number
 ```
 
 The top-left corner's radius in dp.
@@ -58,7 +58,7 @@ The top-left corner's radius in dp.
 ### `getMenu`
 
 ```lua
-TextField:getMenu()
+TextField:getMenu() --> string[]
 ```
 
 The widget's menu items.

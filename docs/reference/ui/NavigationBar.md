@@ -49,7 +49,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-NavigationBar:getBadge()
+NavigationBar:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -57,7 +57,7 @@ What the badge shows, or "" if there is none.
 ### `getItemCount`
 
 ```lua
-NavigationBar:getItemCount()
+NavigationBar:getItemCount() --> integer
 ```
 
 How many items there are.
@@ -65,7 +65,7 @@ How many items there are.
 ### `getItemLabel`
 
 ```lua
-NavigationBar:getItemLabel(index: integer)
+NavigationBar:getItemLabel(index: integer) --> string?
 ```
 
 The label of an item (from 1), or nil.
@@ -73,7 +73,7 @@ The label of an item (from 1), or nil.
 ### `getMenu`
 
 ```lua
-NavigationBar:getMenu()
+NavigationBar:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -81,7 +81,7 @@ The widget's menu items.
 ### `getSelectedIndex`
 
 ```lua
-NavigationBar:getSelectedIndex()
+NavigationBar:getSelectedIndex() --> integer
 ```
 
 The open item (from 1), or 0 if there are none.

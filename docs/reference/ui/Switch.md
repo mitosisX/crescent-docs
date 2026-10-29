@@ -39,7 +39,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Switch:getBadge()
+Switch:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -47,7 +47,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-Switch:getMenu()
+Switch:getMenu() --> string[]
 ```
 
 The widget's menu items.

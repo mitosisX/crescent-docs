@@ -35,7 +35,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Image:getBadge()
+Image:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -43,7 +43,7 @@ What the badge shows, or "" if there is none.
 ### `getCornerRadius`
 
 ```lua
-Image:getCornerRadius()
+Image:getCornerRadius() --> number
 ```
 
 The top-left corner's radius in dp.
@@ -51,7 +51,7 @@ The top-left corner's radius in dp.
 ### `getMenu`
 
 ```lua
-Image:getMenu()
+Image:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -59,7 +59,7 @@ The widget's menu items.
 ### `getSource`
 
 ```lua
-Image:getSource()
+Image:getSource() --> string
 ```
 
 The path last given to setSource.
@@ -158,7 +158,7 @@ Fixed width and height in dp.
 Image:setSource(path: string)
 ```
 
-Loads a picture: "assets/name.png" (shipped with the app), an absolute path, or a path in the app's files.
+Loads a picture: "assets/name.png" (shipped with the app), an absolute path, a path in the app's files, or an "https://..." address, which arrives on its own and fires onLoad.
 
 ### `setWidth`
 
@@ -167,6 +167,24 @@ Image:setWidth(width: number)
 ```
 
 Fixed width in dp.
+
+## Functions
+
+### `getCacheSeconds`
+
+```lua
+Image.getCacheSeconds() --> integer
+```
+
+The time a fetched picture is kept, in seconds.
+
+### `setCacheSeconds`
+
+```lua
+Image.setCacheSeconds(seconds: integer)
+```
+
+How long a picture fetched from the web is kept before it is fetched again, in seconds (a week by default). 0 keeps it for good.
 
 ## Events
 
@@ -179,6 +197,14 @@ Image:setOnClick(function(widget) end)
 ```
 
 Fired when the image is tapped.
+
+### `setOnLoad`
+
+```lua
+Image:setOnLoad(function(widget) end)
+```
+
+Fired once the picture is on screen. Worth having for an "https://..." picture, which arrives after the screen is already up.
 
 ### `setOnLongPress`
 

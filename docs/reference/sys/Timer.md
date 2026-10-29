@@ -22,7 +22,7 @@ Each property has a getter and a setter: `getName()` / `setName(value)`; boolean
 ### `isRunning`
 
 ```lua
-Timer:isRunning()
+Timer:isRunning() --> boolean
 ```
 
 Whether the timer is ticking.

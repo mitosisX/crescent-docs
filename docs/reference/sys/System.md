@@ -7,7 +7,7 @@
 ### `getClipboardText`
 
 ```lua
-System.getClipboardText()
+System.getClipboardText() --> string
 ```
 
 The clipboard's text, or an empty string.
@@ -15,7 +15,7 @@ The clipboard's text, or an empty string.
 ### `getOSName`
 
 ```lua
-System.getOSName()
+System.getOSName() --> string
 ```
 
 Always "Android".
@@ -23,7 +23,7 @@ Always "Android".
 ### `getOSVersion`
 
 ```lua
-System.getOSVersion()
+System.getOSVersion() --> string
 ```
 
 The Android version, e.g. "14".
@@ -31,7 +31,7 @@ The Android version, e.g. "14".
 ### `getScreenHeight`
 
 ```lua
-System.getScreenHeight()
+System.getScreenHeight() --> integer
 ```
 
 The screen's height in dp.
@@ -39,7 +39,7 @@ The screen's height in dp.
 ### `getScreenWidth`
 
 ```lua
-System.getScreenWidth()
+System.getScreenWidth() --> integer
 ```
 
 The screen's width in dp, the unit every size in the API uses.
@@ -47,7 +47,7 @@ The screen's width in dp, the unit every size in the API uses.
 ### `getStandardPath`
 
 ```lua
-System.getStandardPath(name: string)
+System.getStandardPath(name: string) --> string
 ```
 
 A standard folder: "data", "cache", "documents" or "external".
@@ -55,7 +55,7 @@ A standard folder: "data", "cache", "documents" or "external".
 ### `isDarkMode`
 
 ```lua
-System.isDarkMode()
+System.isDarkMode() --> boolean
 ```
 
 True when the phone is in dark mode.
@@ -63,7 +63,7 @@ True when the phone is in dark mode.
 ### `randomChoice`
 
 ```lua
-System.randomChoice(items: string[])
+System.randomChoice(items: string[]) --> string
 ```
 
 One item picked at random.
@@ -87,7 +87,7 @@ Waits this many milliseconds without freezing the screen.
 ### `splitString`
 
 ```lua
-System.splitString(text: string, separator: string)
+System.splitString(text: string, separator: string) --> string[]
 ```
 
 Splits text on a separator.

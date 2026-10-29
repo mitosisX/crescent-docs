@@ -35,7 +35,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Card:getBadge()
+Card:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -43,7 +43,7 @@ What the badge shows, or "" if there is none.
 ### `getCornerRadius`
 
 ```lua
-Card:getCornerRadius()
+Card:getCornerRadius() --> number
 ```
 
 The top-left corner's radius in dp.
@@ -51,7 +51,7 @@ The top-left corner's radius in dp.
 ### `getMenu`
 
 ```lua
-Card:getMenu()
+Card:getMenu() --> string[]
 ```
 
 The widget's menu items.

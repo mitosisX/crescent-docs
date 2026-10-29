@@ -49,7 +49,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Tabs:getBadge()
+Tabs:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -57,7 +57,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-Tabs:getMenu()
+Tabs:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -65,7 +65,7 @@ The widget's menu items.
 ### `getSelectedIndex`
 
 ```lua
-Tabs:getSelectedIndex()
+Tabs:getSelectedIndex() --> integer
 ```
 
 The open tab (from 1), or 0 if there are none.
@@ -73,7 +73,7 @@ The open tab (from 1), or 0 if there are none.
 ### `getTabCount`
 
 ```lua
-Tabs:getTabCount()
+Tabs:getTabCount() --> integer
 ```
 
 How many tabs there are.
@@ -81,7 +81,7 @@ How many tabs there are.
 ### `getTabLabel`
 
 ```lua
-Tabs:getTabLabel(index: integer)
+Tabs:getTabLabel(index: integer) --> string?
 ```
 
 The label of a tab (from 1), or nil.

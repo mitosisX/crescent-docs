@@ -50,7 +50,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Flow:getBadge()
+Flow:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -58,7 +58,7 @@ What the badge shows, or "" if there is none.
 ### `getChildAt`
 
 ```lua
-Flow:getChildAt(index: integer)
+Flow:getChildAt(index: integer) --> any
 ```
 
 The child at a position (from 1), or nil.
@@ -66,7 +66,7 @@ The child at a position (from 1), or nil.
 ### `getChildCount`
 
 ```lua
-Flow:getChildCount()
+Flow:getChildCount() --> integer
 ```
 
 How many children there are.
@@ -74,7 +74,7 @@ How many children there are.
 ### `getMenu`
 
 ```lua
-Flow:getMenu()
+Flow:getMenu() --> string[]
 ```
 
 The widget's menu items.

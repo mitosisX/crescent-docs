@@ -15,7 +15,7 @@ Drops the app's own colours and goes back to the phone's.
 ### `isDarkMode`
 
 ```lua
-Theme.isDarkMode()
+Theme.isDarkMode() --> boolean
 ```
 
 Whether the dark half of the theme is showing.

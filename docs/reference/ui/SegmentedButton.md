@@ -50,7 +50,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-SegmentedButton:getBadge()
+SegmentedButton:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -58,7 +58,7 @@ What the badge shows, or "" if there is none.
 ### `getItemCount`
 
 ```lua
-SegmentedButton:getItemCount()
+SegmentedButton:getItemCount() --> integer
 ```
 
 How many items there are.
@@ -66,7 +66,7 @@ How many items there are.
 ### `getItemLabel`
 
 ```lua
-SegmentedButton:getItemLabel(index: integer)
+SegmentedButton:getItemLabel(index: integer) --> string?
 ```
 
 The label of an item (from 1), or nil.
@@ -74,7 +74,7 @@ The label of an item (from 1), or nil.
 ### `getMenu`
 
 ```lua
-SegmentedButton:getMenu()
+SegmentedButton:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -82,7 +82,7 @@ The widget's menu items.
 ### `getSelectedIndex`
 
 ```lua
-SegmentedButton:getSelectedIndex()
+SegmentedButton:getSelectedIndex() --> integer
 ```
 
 The chosen position (from 1), or 0 if none is. With several on, the first of them.
@@ -90,7 +90,7 @@ The chosen position (from 1), or 0 if none is. With several on, the first of the
 ### `getSelectedIndexes`
 
 ```lua
-SegmentedButton:getSelectedIndexes()
+SegmentedButton:getSelectedIndexes() --> integer[]
 ```
 
 The positions (from 1) of every item that is on.

@@ -50,7 +50,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-ChipGroup:getBadge()
+ChipGroup:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -58,7 +58,7 @@ What the badge shows, or "" if there is none.
 ### `getChildAt`
 
 ```lua
-ChipGroup:getChildAt(index: integer)
+ChipGroup:getChildAt(index: integer) --> any
 ```
 
 The chip at a position (from 1), or nil.
@@ -66,7 +66,7 @@ The chip at a position (from 1), or nil.
 ### `getChildCount`
 
 ```lua
-ChipGroup:getChildCount()
+ChipGroup:getChildCount() --> integer
 ```
 
 How many chips there are.
@@ -74,7 +74,7 @@ How many chips there are.
 ### `getMenu`
 
 ```lua
-ChipGroup:getMenu()
+ChipGroup:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -82,7 +82,7 @@ The widget's menu items.
 ### `getSelectedIndex`
 
 ```lua
-ChipGroup:getSelectedIndex()
+ChipGroup:getSelectedIndex() --> integer
 ```
 
 The position of the chip that is on (from 1), or 0 if none is.
@@ -90,7 +90,7 @@ The position of the chip that is on (from 1), or 0 if none is.
 ### `getSelectedIndexes`
 
 ```lua
-ChipGroup:getSelectedIndexes()
+ChipGroup:getSelectedIndexes() --> integer[]
 ```
 
 The positions (from 1) of every chip that is on.

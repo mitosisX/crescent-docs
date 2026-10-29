@@ -34,7 +34,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-ProgressBar:getBadge()
+ProgressBar:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -42,7 +42,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-ProgressBar:getMenu()
+ProgressBar:getMenu() --> string[]
 ```
 
 The widget's menu items.

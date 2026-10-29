@@ -58,7 +58,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Dropdown:getBadge()
+Dropdown:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -66,7 +66,7 @@ What the badge shows, or "" if there is none.
 ### `getItemAt`
 
 ```lua
-Dropdown:getItemAt(index: integer)
+Dropdown:getItemAt(index: integer) --> string?
 ```
 
 The text at a position (from 1), or nil.
@@ -74,7 +74,7 @@ The text at a position (from 1), or nil.
 ### `getMenu`
 
 ```lua
-Dropdown:getMenu()
+Dropdown:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -82,7 +82,7 @@ The widget's menu items.
 ### `getSelectedIndex`
 
 ```lua
-Dropdown:getSelectedIndex()
+Dropdown:getSelectedIndex() --> integer
 ```
 
 The chosen position (from 1), or 0 if empty.
@@ -90,7 +90,7 @@ The chosen position (from 1), or 0 if empty.
 ### `getSelectedItem`
 
 ```lua
-Dropdown:getSelectedItem()
+Dropdown:getSelectedItem() --> string
 ```
 
 The chosen item's text.

@@ -44,10 +44,10 @@ Removes every top bar action.
 ### `close`
 
 ```lua
-Screen:close()
+Screen:close(result?: any)
 ```
 
-Closes the screen and returns to the one under it.
+Closes the screen and returns to the one under it, handing it a result: whatever a screen was opened to find out (the row the user picked, the text they typed). Closing with Back hands back nothing.
 
 ### `closeDrawer`
 
@@ -68,7 +68,7 @@ Moves keyboard focus here.
 ### `getActionCount`
 
 ```lua
-Screen:getActionCount()
+Screen:getActionCount() --> integer
 ```
 
 How many actions the top bar has.
@@ -76,7 +76,7 @@ How many actions the top bar has.
 ### `getBadge`
 
 ```lua
-Screen:getBadge()
+Screen:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -84,7 +84,7 @@ What the badge shows, or "" if there is none.
 ### `getBarSize`
 
 ```lua
-Screen:getBarSize()
+Screen:getBarSize() --> string
 ```
 
 The bar size set with setBarSize.
@@ -92,7 +92,7 @@ The bar size set with setBarSize.
 ### `getMenu`
 
 ```lua
-Screen:getMenu()
+Screen:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -100,7 +100,7 @@ The widget's menu items.
 ### `isDrawerOpen`
 
 ```lua
-Screen:isDrawerOpen()
+Screen:isDrawerOpen() --> boolean
 ```
 
 Whether the drawer is out.
@@ -256,10 +256,10 @@ Fired when the widget is tapped. A tap on a widget with its own touch handling (
 ### `setOnClose`
 
 ```lua
-Screen:setOnClose(function(widget) end)
+Screen:setOnClose(function(widget, result: any) end)
 ```
 
-Fired when the screen closes (Back or close()).
+Fired when the screen closes, with the result close() was given (nothing, when the user pressed Back).
 
 ### `setOnLongPress`
 

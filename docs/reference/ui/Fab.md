@@ -54,7 +54,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Fab:getBadge()
+Fab:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -62,7 +62,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-Fab:getMenu()
+Fab:getMenu() --> string[]
 ```
 
 The widget's menu items.

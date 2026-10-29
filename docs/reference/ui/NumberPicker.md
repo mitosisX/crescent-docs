@@ -36,7 +36,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-NumberPicker:getBadge()
+NumberPicker:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -44,7 +44,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-NumberPicker:getMenu()
+NumberPicker:getMenu() --> string[]
 ```
 
 The widget's menu items.

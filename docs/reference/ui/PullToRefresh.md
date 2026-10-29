@@ -34,7 +34,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-PullToRefresh:getBadge()
+PullToRefresh:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -42,7 +42,7 @@ What the badge shows, or "" if there is none.
 ### `getContent`
 
 ```lua
-PullToRefresh:getContent()
+PullToRefresh:getContent() --> any
 ```
 
 What is inside, or nil.
@@ -50,7 +50,7 @@ What is inside, or nil.
 ### `getMenu`
 
 ```lua
-PullToRefresh:getMenu()
+PullToRefresh:getMenu() --> string[]
 ```
 
 The widget's menu items.

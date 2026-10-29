@@ -41,7 +41,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Sheet:getBadge()
+Sheet:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -49,7 +49,7 @@ What the badge shows, or "" if there is none.
 ### `getContent`
 
 ```lua
-Sheet:getContent()
+Sheet:getContent() --> any
 ```
 
 What the sheet holds, or nil.
@@ -57,7 +57,7 @@ What the sheet holds, or nil.
 ### `getMenu`
 
 ```lua
-Sheet:getMenu()
+Sheet:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -65,7 +65,7 @@ The widget's menu items.
 ### `getPeek`
 
 ```lua
-Sheet:getPeek()
+Sheet:getPeek() --> number
 ```
 
 The peek height in dp.
@@ -73,7 +73,7 @@ The peek height in dp.
 ### `isExpanded`
 
 ```lua
-Sheet:isExpanded()
+Sheet:isExpanded() --> boolean
 ```
 
 Whether the sheet opens all the way up.
@@ -81,7 +81,7 @@ Whether the sheet opens all the way up.
 ### `isOpen`
 
 ```lua
-Sheet:isOpen()
+Sheet:isOpen() --> boolean
 ```
 
 Whether the sheet is open.

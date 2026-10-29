@@ -33,6 +33,24 @@ end
 Every screen but the first gets a back arrow in its top bar. `setOnClose` runs when the screen goes
 away, by Back or by `close()`.
 
+A screen opened to find something out can hand the answer back. `close(result)` passes it, and the
+screen underneath reads it in `setOnClose`:
+
+```lua
+local function pickColour()
+  local picker = ui.Screen { title = "Pick a colour" }
+  local list = ui.List():setItems({ "Red", "Green", "Blue" })
+  list:setOnItemSelect(function(_, text) picker:close(text) end)
+  picker:setContent(list)
+  picker:setOnClose(function(_, chosen)
+    if chosen then label:setText(chosen) end   -- nil when the user pressed Back
+  end)
+  picker:show()
+end
+```
+
+Back hands back nothing, so treat `nil` as "the user changed their mind".
+
 ## The top bar
 
 A screen with a title has a top bar. It can also show a second line and icons on the right:

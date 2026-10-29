@@ -49,7 +49,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-RadioGroup:getBadge()
+RadioGroup:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -57,7 +57,7 @@ What the badge shows, or "" if there is none.
 ### `getChildCount`
 
 ```lua
-RadioGroup:getChildCount()
+RadioGroup:getChildCount() --> integer
 ```
 
 How many choices there are.
@@ -65,7 +65,7 @@ How many choices there are.
 ### `getMenu`
 
 ```lua
-RadioGroup:getMenu()
+RadioGroup:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -73,7 +73,7 @@ The widget's menu items.
 ### `getSelectedIndex`
 
 ```lua
-RadioGroup:getSelectedIndex()
+RadioGroup:getSelectedIndex() --> integer
 ```
 
 The picked position (from 1), or 0 if none.

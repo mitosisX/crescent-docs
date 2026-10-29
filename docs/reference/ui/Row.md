@@ -65,7 +65,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Row:getBadge()
+Row:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -73,7 +73,7 @@ What the badge shows, or "" if there is none.
 ### `getChildAt`
 
 ```lua
-Row:getChildAt(index: integer)
+Row:getChildAt(index: integer) --> any
 ```
 
 The child at a 1-based position, or nil.
@@ -81,7 +81,7 @@ The child at a 1-based position, or nil.
 ### `getChildCount`
 
 ```lua
-Row:getChildCount()
+Row:getChildCount() --> integer
 ```
 
 How many children the layout has.
@@ -89,7 +89,7 @@ How many children the layout has.
 ### `getMenu`
 
 ```lua
-Row:getMenu()
+Row:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -97,7 +97,7 @@ The widget's menu items.
 ### `getSpacing`
 
 ```lua
-Row:getSpacing()
+Row:getSpacing() --> number
 ```
 
 Space between children, in dp.

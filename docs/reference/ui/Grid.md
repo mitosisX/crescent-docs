@@ -49,7 +49,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Grid:getBadge()
+Grid:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -57,7 +57,7 @@ What the badge shows, or "" if there is none.
 ### `getChildCount`
 
 ```lua
-Grid:getChildCount()
+Grid:getChildCount() --> integer
 ```
 
 How many children the grid has.
@@ -65,7 +65,7 @@ How many children the grid has.
 ### `getMenu`
 
 ```lua
-Grid:getMenu()
+Grid:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -73,7 +73,7 @@ The widget's menu items.
 ### `getSpacing`
 
 ```lua
-Grid:getSpacing()
+Grid:getSpacing() --> number
 ```
 
 Space between cells, in dp.

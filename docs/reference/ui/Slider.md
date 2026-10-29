@@ -34,7 +34,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Slider:getBadge()
+Slider:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -42,7 +42,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-Slider:getMenu()
+Slider:getMenu() --> string[]
 ```
 
 The widget's menu items.

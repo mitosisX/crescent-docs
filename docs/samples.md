@@ -26,6 +26,15 @@ sideways [`Scroller`](guide/layouts.md#scroller), [outlined cards](guide/styling
 pill buttons, [`setStatusBarColor`](guide/screens.md#status-bar-colour), per-corner radius, and
 bundled fonts.
 
+## Dog photos
+
+One picture from the web, fetched again whenever you ask. Short enough to read in a minute, and the
+point is that nothing in it is a callback: the fetch waits on its own line and the screen keeps
+moving.
+
+Shows: [the web](guide/web.md), a [picture from an address](guide/web.md#pictures), and
+[`Image`](reference/ui/Image.md) corners and scaling.
+
 ## Notes
 
 A list of notes, one text file each. Tap a note to edit it on its own screen; Back saves it.

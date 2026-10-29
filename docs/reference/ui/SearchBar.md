@@ -46,7 +46,7 @@ Opens the keyboard with the bar ready to type in.
 ### `getBadge`
 
 ```lua
-SearchBar:getBadge()
+SearchBar:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -54,7 +54,7 @@ What the badge shows, or "" if there is none.
 ### `getMenu`
 
 ```lua
-SearchBar:getMenu()
+SearchBar:getMenu() --> string[]
 ```
 
 The widget's menu items.

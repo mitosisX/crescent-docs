@@ -50,7 +50,7 @@ Moves keyboard focus here.
 ### `getBadge`
 
 ```lua
-Carousel:getBadge()
+Carousel:getBadge() --> string
 ```
 
 What the badge shows, or "" if there is none.
@@ -58,7 +58,7 @@ What the badge shows, or "" if there is none.
 ### `getChildAt`
 
 ```lua
-Carousel:getChildAt(index: integer)
+Carousel:getChildAt(index: integer) --> any
 ```
 
 The item at a position (from 1), or nil.
@@ -66,7 +66,7 @@ The item at a position (from 1), or nil.
 ### `getChildCount`
 
 ```lua
-Carousel:getChildCount()
+Carousel:getChildCount() --> integer
 ```
 
 How many items there are.
@@ -74,7 +74,7 @@ How many items there are.
 ### `getCornerRadius`
 
 ```lua
-Carousel:getCornerRadius()
+Carousel:getCornerRadius() --> number
 ```
 
 The item corner radius in dp.
@@ -82,7 +82,7 @@ The item corner radius in dp.
 ### `getItemWidth`
 
 ```lua
-Carousel:getItemWidth()
+Carousel:getItemWidth() --> number
 ```
 
 The item width in dp.
@@ -90,7 +90,7 @@ The item width in dp.
 ### `getMenu`
 
 ```lua
-Carousel:getMenu()
+Carousel:getMenu() --> string[]
 ```
 
 The widget's menu items.
@@ -98,7 +98,7 @@ The widget's menu items.
 ### `getSelectedIndex`
 
 ```lua
-Carousel:getSelectedIndex()
+Carousel:getSelectedIndex() --> integer
 ```
 
 The item nearest the start of the carousel (from 1), or 0 if there are none.

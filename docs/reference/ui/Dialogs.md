@@ -15,7 +15,7 @@ A message with an OK button. Waits until it is dismissed.
 ### `confirm`
 
 ```lua
-Dialogs.confirm(title: string, message: string)
+Dialogs.confirm(title: string, message: string) --> boolean
 ```
 
 Asks a yes/no question; returns true for Yes.
@@ -23,7 +23,7 @@ Asks a yes/no question; returns true for Yes.
 ### `pickDate`
 
 ```lua
-Dialogs.pickDate(title?: string?, date?: string?)
+Dialogs.pickDate(title?: string?, date?: string?) --> string?
 ```
 
 Shows a date picker; returns the chosen date as "YYYY-MM-DD", or nil if cancelled. `date` is the starting date in the same form (default today).
@@ -31,7 +31,7 @@ Shows a date picker; returns the chosen date as "YYYY-MM-DD", or nil if cancelle
 ### `pickTime`
 
 ```lua
-Dialogs.pickTime(title?: string?, time?: string?)
+Dialogs.pickTime(title?: string?, time?: string?) --> string?
 ```
 
 Shows a time picker; returns the chosen time as "HH:MM" on a 24 hour clock, or nil if cancelled. `time` is the starting time in the same form (default now). The dial itself follows the phone's 12 or 24 hour setting.
@@ -39,7 +39,7 @@ Shows a time picker; returns the chosen time as "HH:MM" on a 24 hour clock, or n
 ### `prompt`
 
 ```lua
-Dialogs.prompt(title: string, label: string, text?: string)
+Dialogs.prompt(title: string, label: string, text?: string) --> string?
 ```
 
 Asks for a line of text; returns it, or nil if cancelled.
